@@ -22,11 +22,11 @@ function updateBatteryStatus(battery) {
     chargeLevel.textContent = (battery.level * 100) + "%";
     chargeMeter.value = battery.level * 100;
 
-    // Create a new img element
+    // Creating a new img element
     const img = document.createElement('img');
-    // Set the src attribute to the Robohash API URL with the battery level appended
+    // Source of image according to the percentage
     img.src = `https://robohash.org/${battery.level * 100}.png`;
-    // Append the img element to the #battery element
+    // Showing in the Html
     document.querySelector('#battery').appendChild(img);
 }
 
